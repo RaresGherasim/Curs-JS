@@ -1,0 +1,214 @@
+body {
+  color: red;
+}
+
+#container .class1 {
+  color: blue;
+}
+
+#firstId {
+  color: green;
+}
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73ad21;
+}
+div.static {
+  position: static;
+  left: 30px;
+  border: 3px solid #73ad21;
+}
+div.fixed {
+    position: fixed;
+    bottom: 200;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+  }
+  div.relativeWithAbsoluteInside {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73ad21;
+  }
+  
+  div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73ad21;
+  }
+  div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: #cae8ca;
+    border: 2px solid #4caf50;
+  }
+  .block {
+    display: block;
+    border: 2px solid #4caf50;
+}
+.inline {
+    display: inline;
+    border: 2px solid #4caf50;
+}
+.inlineblock {
+    display: inline-block;
+    border: 2px solid #4caf50;
+    width: 250px;
+}
+.container {
+    display: flex; /* or inline-flex */
+    border: 2px solid #4caf50;
+    flex-direction: raw;
+    justify-content: space-evenly;
+  }
+  .child {
+    border: 2px solid #4caf50;
+}
+#main {
+  width: 220px;
+  height: 300px;
+  border: 1px solid black; 
+  display: flex;
+  align-items: center;
+}
+#mainAlignContent {
+  width: 70px;
+  height: 300px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+#mainAlignContent div {
+  width: 70px;
+  height: 70px;
+}
+.gapContainer {
+  display: flex;
+  gap: 50px;
+  border: 2px solid #4caf50;
+}
+.centerContainer {
+  display: flex;
+  height: 300px; /* Or whatever */
+  border: 2px solid #4caf50;
+}
+
+.centerContainer .child {
+  width: 100px;  /* Or whatever */
+  height: 100px; /* Or whatever */
+  margin: auto;  /* Magic! */
+}
+#orderContainer {
+  width: 400px;
+  height: 150px;
+  border: 1px solid #c3c3c3;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  justify-content:space-around;
+}
+
+/* Standard syntax */
+#myRedDIV   {order: 2;}
+#myBlueDIV  {order: 4;}
+#myGreenDIV {order: 3;}
+#myPinkDIV  {order: 1;}
+
+.flexGrowContainer {
+  display: flex;
+}
+
+.flexGrowContainer .firstChild {
+  flex-grow: 3;
+}
+
+.flexGrowContainer .secondChild, .flexGrowContainer .thirdChild {
+  flex-grow: 6;
+}
+.flexShrinkContainer {
+  display: flex;
+}
+
+.flexShrinkContainer .firstChild {
+  flex-shrink: 4;
+}
+
+.flexShrinkContainer .secondChild, .flexShrinkContainer .thirdChild {
+  flex-shrink: 1;
+}
+
+.flexBasisContainer {
+  display: flex;
+}
+
+.flexBasisContainer .firstChild {
+  flex-basis: 200px;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.flexContainer .firstChild {
+  flex: 2;
+}
+
+.flexContainer .secondChild, .flexContainer .thirdChild {
+  flex: 1;
+}
+
+#alignSelfContainer {
+  width: 220px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  align-items: flex-start;
+}
+
+#alignSelfContainer div {
+  flex: 1;
+}
+
+#alignSelfContainer .myBlueDiv {
+  align-self:flex-end;
+}
+
+.animationDiv {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+
+.animationDiv:hover {
+  width: 300px;
+}
+
+.transformScale:hover {
+  width: 150px;
+  height: 80px;
+  background-color: yellow;
+  transform:translatex(100px) ;
+}
+
+.animatedDiv {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: exampleAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes exampleAnimation {
+  0% {background-color: red;}
+  50% {background-color: yellow;}
+  100% {background-color: red;}
+}

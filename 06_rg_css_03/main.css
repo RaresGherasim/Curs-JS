@@ -1,0 +1,106 @@
+body 
+{
+    color: red;
+}
+.container {
+    display: grid;
+    border: 2px solid greenyellow;
+}
+
+.item {
+    border: 2px solid green;
+}
+.gridTemplateColumnsContainer {
+    display: grid;
+    border: 2px solid greenyellow;
+    grid-template-columns: 1fr 2fr 60px;
+}
+.item-a {
+    grid-area: header;
+  }
+  .item-b {
+    grid-area: main;
+  }
+  .item-c {
+    grid-area: sidebar;
+  }
+  .item-d {
+    grid-area: footer;
+  }
+  
+  .gridTemplateAreascontainer {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header header header"
+      "main main . sidebar"
+      "footer footer footer footer";
+  }
+  .gapContainer {
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    grid-template-rows: 80px auto 80px;
+    gap: 15px 10px;
+    border: 2px solid orange;
+  }
+  #justifyItemsContainer {
+    width: 50%;
+    aspect-ratio: 2/1;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+  }
+  
+  #justifyItemsContainer > div {
+    border: 1px solid black;
+  }
+  
+  #justifyItemsContainer .blue {
+    background-color: lightblue;
+    width: 50%;
+  }
+  
+  #justifyItemsContainer .red {
+    background-color: coral;
+    width: 40%;
+  }
+  
+  #justifyItemsContainer .green {
+    background-color: lightgreen;
+    width: 60%;
+  }
+  .alignItemsContainer {
+    display: grid;
+    border: 2px solid orange;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px;
+    align-items: stretch;
+}
+.gridShorthandContainer {
+    display: grid;
+    border: 2px solid orange;
+    grid: 100px 300px / 3fr 1fr;
+    /* grid-template-rows: 100px 300px;
+    grid-template-columns: 3fr 1fr; */
+  }
+  .gridColumnContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196f3;
+    padding: 10px;
+  }
+  
+  .gridColumnContainer > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  
+  .gridColumnContainer .item1 {
+    grid-column: 2 / span 2;
+    grid-row: 0;
+  }

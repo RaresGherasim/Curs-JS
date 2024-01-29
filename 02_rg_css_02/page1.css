@@ -1,0 +1,41 @@
+p {
+    border-style: solid;
+    border-color: blueviolet;
+    border-width: 2px;
+    padding: 5px;
+    margin: 10px;
+}
+h2 {
+    text-decoration: underline;
+    margin-bottom: 2px;
+    color: blue;
+ 
+}
+.input-section-title {
+    color: rgb(200, 35, 100);
+   }
+#city-selector {
+    color: rgb(245, 7, 237);
+}
+span {
+    font-size: 1.2em;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+div {
+    background-color: rgb(255, 248, 220, 0.85);
+}
+body {
+    margin: 0;
+    padding: 1em;
+}
+a:link {
+    color: rgb(6, 207, 83);
+}
+a:visited {
+    color: rgb(206, 6, 6);
+}
+a:hover {
+    font-size: xx-large;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Pagina 1</title>
+  </head>
+  <body>
+    <a href="page2.html">Page 2</a>
+    <div></div>
+    <a href="page3.html">Page 3</a>
+    <div>
+      <h1>Demonstraiting HTML elements</h1>
+      <h2>Paragraph</h2>
+      <p>Paragraf nou.Se testeaza aspectul de paragraf</p>
+      <p>
+        Cursurile sunt predate cu exercitii practice, pentru a se vedea clar
+        diferenta intre diferite situatii
+      </p>
+      <p>Un alt paragraf despre cat de minunata e scoala Informala</p>
+      <h2>Image</h2>
+      <img
+        src="https://platforma.scoalainformala.ro/pluginfile.php/1/core_admin/logocompact/300x300/1683627879/logo_color%20small.png"
+        alt="Imagine"
+        name="Scoala Informala"
+        id="Scoala"
+        title="Chiar Scoala"
+      />
+      <h2>Dropdown selector</h2>
+      <select name="selectie" id="selectie">
+        <option>Berlin</option>
+        <option>Bruxelles</option>
+        <option>Cluj</option>
+      </select>
+      <h2>Radio buttons</h2>
+      <input type="radio" name="course" id="dotnet" />
+      <label for="dotnet">.NET Developement</label>
+
+      <input type="radio" name="course" id="js" />
+      <label for="js">JavaScript Developement</label>
+      <br />
+      <input type="radio" name="course" id="java" />
+      <label for="java">Java Developement</label>
+      <h2>Checkbox</h2>
+      <h3>Ce vreau eu de la un curs de programare</h3>
+      <input type="checkbox" name="calificare" id="acreditare" />
+      <label for="acreditare">Acreditare Ministerul Muncii</label>
+      <br />
+      <input type="checkbox" name="calificare" id="calificare" />
+      <label for="calificare">Calificare COR</label>
+      <br />
+      <input type="checkbox" name="calificare" id="continut" />
+      <label for="continut">Sanse reale</label>
+      <h2>Textbox</h2>
+      <input
+        type="text"
+        name="textbox"
+        id="textbox"
+        placeholder="Please enter your text"
+      />
+      <h2>Table</h2>
+      <table>
+        <caption>
+          Notele la cursul de Intro
+        </caption>
+        <tbody>
+          <tr>
+            <td>Nume</td>
+            <td>Nota programare</td>
+            <td>Nota test</td>
+          </tr>
+          <tr>
+            <td>Ionescu</td>
+            <td>10</td>
+            <td>9.5</td>
+          </tr>
+          <tr>
+            <td>Popescu</td>
+            <td>10</td>
+            <td>9.7</td>
+          </tr>
+          <tr>
+            <td>Rares</td>
+            <td>10</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Lists</h2>
+
+      <h3>Ordered list</h3>
+      <ol>
+        <li>How does an app comes to life?</li>
+        <li>Mast-have skills for the journey</li>
+        <li>Can you become a developer</li>
+        <li>...or how about tester?</li>
+        <li>Find out</li>
+      </ol>
+      <h3>Unordered list</h3>
+      <ul>
+        <li>How does an app comes to life?</li>
+        <li>Mast-have skills for the journey</li>
+        <li>Can you become a developer</li>
+        <li>...or how about tester?</li>
+        <li>Find out</li>
+        <a href="https://freecodecamp.org">link to cat pictures</a>
+      </ul>
+      <section>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+            alt="A slice of lasagna on a plate."
+          />
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <li>flea treatement</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+            alt="Five cats looking around a field."
+          />
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <input type="text" name="catphotourl" id="catphotourl" placeholder="cat photo URL" required>
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label > <input checked type="radio" id="indoor" value="indoor" name="indoor-outdoor"> Indoor</label>
+            <label > <input type="radio" id="outdoor" value="outdoor" name="indoor-outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input checked type="checkbox" name="personality" id="loving" value="loving"> <label for="loving">Loving</label>
+            <input type="checkbox" name="personality" id="lazy" value="lazy"> <label for="lazy">Lazy</label>
+            <input type="checkbox" name="personality" id="energetic" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <button type="submit">Submit</button>
+        </form>
+
+      </section>
+    </div>
+  <footer>
+    <p> No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a> </p>
+  </footer>
+  </body>
+</html>
