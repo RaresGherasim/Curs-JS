@@ -1,8 +1,8 @@
 console.log(`Let the game begin...`);
 
 
-let numPlayers = prompt('Number of players');
-let numRounds = prompt('Number of rounds');
+let numPlayers = prompt('Number of players ');
+let numRounds = prompt('Number of rounds ');
 let numDice = prompt('Number of dices');
 let numFaces = prompt('Number of faces on each dice');
 let results = [];
@@ -22,20 +22,23 @@ function sumDice(diceValue) {
         sum = sum + diceValue[index]
         
     }
-    console.log(diceValue);
     return sum;
     
-}function OneRound(params) {
-    let roundResult = []
+}function oneRound() {
     for (let index = 0; index < numPlayers; index++) {
        let roll = diceRoll(numDice, numFaces);
-       roundResult.push(sumDice(roll))
-        
+      console.log(`Dices for player ${index + 1} are ${roll}`);
+      console.log(`Sum of dices for player ${index + 1} is ${sumDice(roll)}`);
+      results[index] += (sumDice(roll))
     }
-    return roundResult;
 }
-
-for (let index = 0; index < numRounds; index++) {
-    results.push(OneRound);
+for (let index = 0; index < numPlayers; index++) {
+    results.push(0);   
+}
+for (let round = 0; round < numRounds; round++) {
+    oneRound();
+    console.log(`Results after round ${round + 1} are : ${results}`);
+    console.log(`--------------------------------------------------------------`);
     
 }
+console.log(`Final results after ${numRounds} rounds are : ${results}`);
