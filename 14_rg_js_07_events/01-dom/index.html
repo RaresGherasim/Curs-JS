@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>DOM - manipulation and events</h1>
+
+    <div class="players-container">
+      <div
+        class="player"
+        class="playerClicked-0"
+        onmouseover="playerMouseOver(event)"
+        onclick="playerClick(event)"
+        data-counter = "0"
+        data-name = "Player1"
+      >
+        Player 1 - click
+        <span> - </span>
+      </div>
+      <div
+        class="player"
+        class="playerClicked-0"
+        onclick="playerClick(event)"
+        onmouseover="playerMouseOver(event)"
+        data-counter = "0"
+        data-name = "Player2"
+      >
+        Player 2 - click
+        <span> - </span>
+      </div>
+    </div>
+    <div>
+      <h1>Key down event example</h1>
+      <input type="text" name="" id="" onkeydown="inputKeyDown(event)" />
+    </div>
+  </body>
+</html>

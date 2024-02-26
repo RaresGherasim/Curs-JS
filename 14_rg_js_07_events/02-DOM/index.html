@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>DOM - manipulation and events</h1>
+
+    <div class="players-container">
+      <div
+        class="player"
+        onclick="playerClick(event)"
+        data-counter = "0"
+        data-name = "Player1"
+      >
+        Player 1 - click
+        <span> - </span>
+      </div>
+      <div
+        class="player"
+        onclick="playerClick(event)"
+        data-counter = "0"
+        data-name = "Player2"
+      >
+        Player 2 - click
+        <span> - </span>
+      </div>
+    </div>
+
+  </body>
+</html>

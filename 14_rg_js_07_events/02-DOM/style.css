@@ -1,0 +1,32 @@
+.players-container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: lightcyan;
+}
+.player{
+    height: 10rem;
+    aspect-ratio: 1;
+    border: 10px solid teal;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+}
+.playerClicked-0{
+    background-color: teal;
+    color: white;
+}
+.playerClicked-1{
+    background-color: olive;
+    color: white;
+}
+.playerClicked-2{
+    background-color: magenta;
+    color: white;
+}
+.playerOver{
+    background-color: rgb(128, 0, 107);
+    color: white;
+}
