@@ -1,0 +1,12 @@
+.display-quote{
+    border: 1px solid grey;
+    margin: 1rem;
+    padding: 2 rem;
+    text-align: center;
+}
+.fetch-options{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
