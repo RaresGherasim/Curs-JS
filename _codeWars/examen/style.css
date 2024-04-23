@@ -1,0 +1,15 @@
+li span.special {
+    color: green;
+}
+
+ul span.special {
+    color: red;
+}
+
+ul.main li {
+    color: yellow;
+}
+
+span.special {
+    color: blue;
+}
