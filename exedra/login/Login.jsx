@@ -1,5 +1,5 @@
 import getDevice from "../fetch/FetchDeviceInfo";
-import getDevices from "../fetch/FetchDevices";
+import getDevices from "../fetch/FetchAllDevices";
 import getDeviceMetering from "../fetch/FetchMeasurements";
 import getUsers from "../fetch/FetchUsers";
 
@@ -15,12 +15,16 @@ export default async function login(username, password){
         "email": username,
         "password": password
     }
-    const response = await fetch("https://ro-conpet.schreder-exedra.com/api/v2/login", {
+    const response = await fetch("https://ro-ab-abrud.schreder-exedra.com/api/v2/login", {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "no-cors",
         headers: {
+            "Authorization": `Bearer ${authToken}`,
+            credentials: 'same-origin',
           "Content-Type": "application/json",
-          "Accept": "application/json"
+          "Accept": "application/json",
+          'exedra-subscription-key': 'ce41a2f87bdd493fb4734425d6fd9c03'
+
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
       
@@ -28,7 +32,7 @@ export default async function login(username, password){
       });
 
       const authentication = await response;
-      console.log(authentication.text);
+      console.log(authentication);
 
       if (authentication.errors !== undefined) {
         console.log('authentification error');
