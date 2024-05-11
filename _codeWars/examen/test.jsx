@@ -50,3 +50,34 @@ const PhotoList = () => {
 };
 
 export default PhotoList;
+
+import React from 'react';
+import {useState, useEffect } from 'react';
+
+export default function PhotoList () {
+const [photos, setPhotos] = useState([]);
+
+useEffect (() => {
+async function fetchPhotos () {
+
+                           const response = await
+                           ('htts://jsonplaceholder.typicode.com/photos?_limit=10');
+
+                           const data = await response.json();
+                           setPhotos (data);
+
+                           }
+                           fetchPhotos();
+                        }, [] );
+return (                   
+<>
+     photos.map ((photo) => (
+  <>
+    <a href = { photo.url } >
+    <img src={ photo.thumbnailUrl} />
+    <span> {photo.title} </span>
+    </>
+ )
+                           </>
+))
+                           }
