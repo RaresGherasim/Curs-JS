@@ -10,7 +10,7 @@ let measurement = "activePower";
 let field = "name";
 let errorField;
 let coords = [46.273731,23.064777];
-const googleKey = "AIzaSyD6rYPz4-h51wtsvT91o0i1zUftpZvM-ys";
+const googleKey = "";
 
 export default async function login(username, password){
 
@@ -18,13 +18,13 @@ export default async function login(username, password){
         "email": username,
         "password": password
     }
-    const response = await fetch("https://ro-ab-abrud.schreder-exedra.com/api/v2/login", {
+    const response = await fetch("https://ro-ab-abrud.schreder-exedra.com/api/v1/login", {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
-        mode: "no-cors",
+        mode: "cors",
         headers: {
-            "Authorization": `Bearer ${authToken}`,
+            // "Authorization": `Bearer ${authToken}`,
             credentials: 'same-origin',
-          "Content-Type": "application/json",
+        //   "Content-Type": "application/json",
           "Accept": "application/json",
           'exedra-subscription-key': 'ce41a2f87bdd493fb4734425d6fd9c03'
 
@@ -57,11 +57,11 @@ export default async function login(username, password){
 
 
 
-        getDevices(authToken);
-        getDevice(authToken,deviceID,field);
-        getDeviceMetering(authToken,deviceID,measurement);
-        getUsers(authToken);
-        getAddress(coords[0], coords[1], googleKey);
+        // getDevices(authToken);
+        // getDevice(authToken,deviceID,field);
+        // getDeviceMetering(authToken,deviceID,measurement);
+        // getUsers(authToken);
+        // getAddress(coords[0], coords[1], googleKey);
 
       }
      
