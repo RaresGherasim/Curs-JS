@@ -4,11 +4,11 @@ import App from './App.jsx'
 import './index.css'
 import login from '../login/Login.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+// )
 console.log(`main.js loaded`);
 
 const loginBtn = document.querySelector(`#loginbutton`);
