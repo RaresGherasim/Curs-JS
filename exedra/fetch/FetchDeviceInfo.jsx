@@ -1,5 +1,4 @@
-export default 
-async function getDevice(requestToken, requestId, requestField){
+export default async function getDevice(requestToken, requestId, requestField){
     const response = await fetch(`https://hyp-shared-prd-we-api-gateway.azure-api.net/platform/exedra/readonly/api/api/v2/devices/${requestId}?field=${requestField}`, {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors",

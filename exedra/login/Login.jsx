@@ -2,12 +2,15 @@ import getDevice from "../fetch/FetchDeviceInfo";
 import getDevices from "../fetch/FetchAllDevices";
 import getDeviceMetering from "../fetch/FetchMeasurements";
 import getUsers from "../fetch/FetchUsers";
+import getAddress from "../fetch/FetchAddress";
 
 let authToken;
 let deviceID = "f03c7096-380b-4c6f-8542-b3c6aab9dde1";
 let measurement = "activePower";
 let field = "name";
 let errorField;
+let coords = [46.273731,23.064777];
+const googleKey = "AIzaSyD6rYPz4-h51wtsvT91o0i1zUftpZvM-ys";
 
 export default async function login(username, password){
 
@@ -58,6 +61,7 @@ export default async function login(username, password){
         getDevice(authToken,deviceID,field);
         getDeviceMetering(authToken,deviceID,measurement);
         getUsers(authToken);
+        getAddress(coords[0], coords[1], googleKey);
 
       }
      
