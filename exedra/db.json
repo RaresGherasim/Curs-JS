@@ -1,0 +1,210 @@
+{
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        },
+        {
+            "id": 2,
+            "body": "some comment",
+            "postId": 2
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    },
+    "devices": [
+        {
+            "id": "0b9b9d82-9b73-408f-9a96-5cfdfeec974c",
+            "name": "14EFCF0111013D72",
+            "core": {
+                "type": "LightPoint",
+                "groupPath": "Hyperion/Romania/ro-ab-abrud/ro-ab-abrud/",
+                "unmanaged": false,
+                "simulated": false,
+                "commissioning": {
+                    "hasCommissioning": true,
+                    "commissioned": true,
+                    "status": "done",
+                    "date": "2024-01-02T16:01:49.832Z",
+                    "errors": "",
+                    "updates": {
+                        "pending": false,
+                        "fields": [],
+                        "reasons": [],
+                        "deleted": []
+                    }
+                },
+                "model": "Owlet IV [LightPoint]",
+                "address": {
+                    "street_address": "Piața Cuza Vodă",
+                    "city": "Abrud",
+                    "zipcode": "515100",
+                    "country": "România"
+                },
+                "activeFailures": [],
+                "systematics": [],
+                "labels": []
+            },
+            "coords": {
+                "type": "Point",
+                "coordinates": [
+                    23.064777,
+                    46.273731
+                ]
+            },
+            "status": 1,
+            "lastAccessTime": "2024-05-20T18:35:16.441Z",
+            "firstAccessTime": "2023-12-04T10:41:21.732Z",
+            "lastOkStatusChangeTime": "2024-04-11T19:55:22.000Z",
+            "attributes": {
+                "calendarName": "Abrud Standard",
+                "lampWattage": 62
+            },
+            "failures": {
+                "connectionLost": {
+                    "value": 0,
+                    "date": "2023-12-19T07:45:56.000Z",
+                    "level": 0
+                },
+                "communicationFailure": {
+                    "value": 0,
+                    "date": "2023-12-04T10:41:21.000Z",
+                    "level": 0
+                },
+                "lampFailure": {
+                    "value": 0,
+                    "date": "2023-12-04T10:43:12.000Z",
+                    "level": 0
+                },
+                "lampPowerTooHigh": {
+                    "value": 0,
+                    "date": "2023-12-04T10:43:42.000Z",
+                    "level": 0
+                },
+                "lampPowerTooLow": {
+                    "value": 0,
+                    "date": "2023-12-04T10:44:10.000Z",
+                    "level": 0
+                },
+                "relayFailure": {
+                    "value": 0,
+                    "date": "2023-12-04T10:43:15.000Z",
+                    "level": 0
+                },
+                "supplyVoltageTooHigh": {
+                    "value": 0,
+                    "date": "2023-12-04T10:43:43.000Z",
+                    "level": 0
+                },
+                "supplyVoltageTooLow": {
+                    "value": 0,
+                    "date": "2023-12-04T10:44:10.000Z",
+                    "level": 0
+                },
+                "controlGearFailure": {
+                    "value": 0,
+                    "date": "2023-12-04T10:43:12.000Z",
+                    "level": 0
+                },
+                "controlGearCommFailure": {
+                    "value": 0,
+                    "date": "2024-04-11T19:55:22.000Z",
+                    "level": 0
+                },
+                "daliThermalShutdown": {
+                    "value": 0,
+                    "date": "2023-12-04T10:43:14.000Z",
+                    "level": 0
+                },
+                "daliThermalDerating": {
+                    "value": 0,
+                    "date": "2023-12-04T10:43:13.000Z",
+                    "level": 0
+                },
+                "supplyLoss": {
+                    "value": 0,
+                    "date": "2024-05-20T18:25:05.000Z",
+                    "level": 0
+                },
+                "lowCommunication": {
+                    "value": 0,
+                    "date": "2023-12-18T06:21:03.000Z",
+                    "level": 0
+                }
+            },
+            "tenant": "ro-ab-abrud",
+            "createdAt": "2023-12-04T10:41:21.457Z",
+            "controllerCoords": {
+                "type": "Point",
+                "coordinates": [
+                    23.0647773,
+                    46.2737312
+                ]
+            },
+            "configuration": {
+                "deviceId": "14EFCF0111013D72",
+                "luminaireSpecification": "FLEXIT-20LEDs-1000mA-64W-5308AS",
+                "firmwareVersion": "4.3.6.2",
+                "assetId": "E00401D0069B891A",
+                "dimmingType": "DALI",
+                "daliIndex": "1",
+                "daliCount": 1,
+                "catalogId": "479696",
+                "luminaireModel": "FLEXIT",
+                "driverName": "EBS-080S105BT2",
+                "luminaireSocket": "NEMA LTE",
+                "photometricEngine": "5308AS",
+                "numberOfLeds": 20,
+                "ledColourTemperature": "WW",
+                "luminaireColour": "AKZO900GS",
+                "luminaireIdentificationNumber": "0000000000000000",
+                "luminaireIdentification": "na",
+                "luminaireLumen": 0,
+                "controllerBrand": "Schréder",
+                "controllerModel": "Owlet FOUR",
+                "controllerInstallationDate": "2023-12-04T08:58:17.000Z",
+                "socketType": "NEMA LTE"
+            },
+            "metering": {
+                "activeEnergy": {
+                    "value": 97.55553,
+                    "date": "2024-05-20T18:26:23.000Z"
+                },
+                "activePower": {
+                    "value": 60.6079999,
+                    "date": "2024-05-20T18:31:37.000Z"
+                },
+                "actualLightState": {
+                    "value": 100,
+                    "date": "2024-05-20T18:26:23.000Z"
+                },
+                "operatingHours": {
+                    "value": 1389,
+                    "date": "2024-05-20T18:26:23.000Z"
+                },
+                "supplyCurrent": {
+                    "value": 0.286,
+                    "date": "2024-05-20T18:26:23.000Z"
+                },
+                "supplyVoltage": {
+                    "value": 226.281,
+                    "date": "2024-05-20T18:26:23.000Z"
+                },
+                "lampCommandMode": {
+                    "value": 0,
+                    "date": "2023-12-04T10:41:21.527Z"
+                },
+                "lastSuccessfulCommunication": {
+                    "value": "2024-05-20T18:35:15.000Z",
+                    "date": "2024-05-20T18:35:15.000Z"
+                },
+                "lampSupplyLossCount": {
+                    "value": 209,
+                    "date": "2024-05-20T18:25:05.000Z"
+                }
+            }
+        }
+    ]
+}
