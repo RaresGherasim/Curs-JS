@@ -1,34 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>miniExedra</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6rYPz4-h51wtsvT91o0i1zUftpZvM-ys&callback=initMap"
+      async
+      defer
+    ></script>
   </head>
   <body>
-    <!-- <div id="root"></div> -->
-  <div>
+    <div id="root"></div>
+    <div></div>
+    <div id="authenticate">
+      <div>
+        <div class="error" id="email-error"></div>
+        <label for="userName">username:</label>
+        <input type="text" name="" id="userName" value="herasim@schreder.com" />
+      </div>
+      <div>
+        <div class="error" id="password-error"></div>
+        <label for="password">password:</label>
+        <input type="password" name="" id="password" value="" />
+      </div>
+      <div>
+        <button id="loginbutton">Login</button>
+        <div class="error" id="auth-error"></div>
+      </div>
+    </div>
 
-
-  </div>
-        <div id="authenticate">
-          <div>
-            <div class="error" id="email-error"></div>
-            <label for="userName">username:</label>
-            <input type="text" name="" id="userName" value="herasim@schreder.com" />
-          </div>
-          <div>
-            <div class="error" id="password-error"></div>
-            <label for="password">password:</label>
-            <input type="password" name="" id="password" value="" />
-          </div>
-          <div>
-              <button id="loginbutton">Login</button>
-              <div class="error" id="auth-error"></div>
-          </div>
-        </div>
- 
     <script type="module" src="/src/main.jsx"></script>
+
   </body>
 </html>

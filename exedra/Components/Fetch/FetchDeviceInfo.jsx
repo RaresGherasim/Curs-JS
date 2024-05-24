@@ -3,7 +3,7 @@ export default async function getDevice(requestToken, requestId, requestField){
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors",
         headers: {
-           "Authorization": `Bearer ${requestToken}`,
+          "Authorization": `Bearer ${requestToken}`,
           "Content-Type": "application/json",
           "Accept": "application/json",
           'Cache-Control': 'no-cache',
