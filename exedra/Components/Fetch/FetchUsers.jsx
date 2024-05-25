@@ -1,5 +1,5 @@
 export default async function getUsers(requestToken){
-    const response = await fetch("https://hyp-shared-prd-we-api-gateway.azure-api.net/platform/exedra/readonly/api/api/v2/users/65770a07accc0c0034871820", {
+    const response = await fetch("https://hyp-shared-prd-we-api-gateway.azure-api.net/platform/exedra/readonly/api/api/v2/users", {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors",
         headers: {

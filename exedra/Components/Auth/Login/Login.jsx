@@ -1,11 +1,14 @@
-import getDevice from "../Fetch/FetchDeviceInfo";
-import getDevices from "../Fetch/FetchAllDevices";
-import getDeviceMetering from "../Fetch/FetchMeasurements";
-import getUsers from "../Fetch/FetchUsers";
-import getAddress from "../Fetch/FetchAddress";
+import getDevice from "../../Fetch/FetchDeviceInfo";
+import getDevices from "../../Fetch/FetchAllDevices";
+import getDeviceMetering from "../../Fetch/FetchMeasurements";
+import getUsers from "../../Fetch/FetchUsers";
+import getAddress from "../../Fetch/FetchAddress";
+import populateRealDevice from "../../Populate/PopulateRealElem";
+import populateSimDevice from "../../Populate/PopulateSimElem";
+import populateAllSimElem from "../../Populate/PopulateAllSim";
 
 let authToken;
-let deviceID = "f03c7096-380b-4c6f-8542-b3c6aab9dde1";
+let deviceID = "b3e62e3e-a501-4cc3-886e-1e2c825be89e";
 let measurement = "activePower";
 let field = "name";
 let errorField;
@@ -59,10 +62,14 @@ export default async function login(username, password){
         
     //   }
       
-              getDevices(authToken);
-              getDevice(authToken,deviceID,field);
-              getDeviceMetering(authToken,deviceID,measurement);
-              getUsers(authToken);
-              // getAddress(coords[0], coords[1], googleKey);
+            //   getDevices(authToken);
+            //   getDevice(authToken,deviceID,field);
+            //   populateSimDevice(authToken,deviceID,field);
+            //   getDeviceMetering(authToken,deviceID,measurement);
+               getUsers(authToken);
+            //   getAddress(coords[0], coords[1], googleKey);
+
+
+              // populateAllSimElem(authToken);
      
     }

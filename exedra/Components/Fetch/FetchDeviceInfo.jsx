@@ -16,5 +16,6 @@ export default async function getDevice(requestToken, requestId, requestField){
       });
 
       const profileData = await response.json();
-      console.log(profileData);
+      // console.log(profileData);
+      return(profileData);
 }

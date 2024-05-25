@@ -1,40 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GoogleMap, LoadScript, OverlayView } from '@react-google-maps/api';
+import { Route, Routes } from 'react-router-dom';
 
-const containerStyle = {
-  width: '100vw',
-  height: '100vh'
-};
 
-const center = {
-  lat: 40.748817, // replace with your desired latitude
-  lng: -73.985428 // replace with your desired longitude
-};
 
-const squareStyle = {
-  position: 'absolute',
-  width: '10px',
-  height: '10px',
-  backgroundColor: 'red',
-  transform: 'translate(-50%, -50%)'
-};
+export const DeviceContext = React.createContext();
+export const AuthContext = React.createContext();
 
 function App() {
+  const accessToken = localStorage.getItem("accessToken");
+  const [devices, setDevices] = useState([]);
+  const [auth, setAuth] = useState(accessToken);
   return (
-    <LoadScript googleMapsApiKey="AIzaSyD6rYPz4-h51wtsvT91o0i1zUftpZvM-ys">
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={15}
-      >
-        <OverlayView
-          position={center}
-          mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}
-        >
-          <div style={squareStyle} />
-        </OverlayView>
-      </GoogleMap>
-    </LoadScript>
+    <>
+    <DeviceContext.Provider value={{ devices, setDevices }}>
+      <AuthContext.Provider value={{ auth, setAuth }}>
+        <Navbar />
+
+        {/* Switch statement */}
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/movie/:idFromPath" element={<MovieDetails />}></Route>
+          <Route path="/create-movie" element={<CreateMovie />}></Route>
+          <Route
+            path="/edit-movie/:idFromPath"
+            element={<CreateMovie />}
+          ></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+        </Routes>
+      </AuthContext.Provider>
+    </DeviceContext.Provider>
+  </>
   );
 }
 
