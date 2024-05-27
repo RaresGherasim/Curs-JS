@@ -21,12 +21,6 @@ export default  function populateAllSimElem(token) {
     // )
 
     
-    // getBreeds()
-    // .then (
-        //     () => {
-            //         for(breed in breeds){
-                //             const breedOption = document.createElement('option');
-                //             breedOption.textContent = breed;
-                //             breedOption.value = breed;
+
 
      }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createElement } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
@@ -19,21 +19,18 @@ const userPassInput = document.querySelector('#password');
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-      <div>
-          <App />
-        <BrowserRouter>
-        </BrowserRouter>
-      </div>
-    </React.StrictMode>,
-  )
+<div>
+     <App />
+</div>
 
-loginBtn.addEventListener('click', function(){
-    console.log(`Init username: ${userNameInput.value} and password:${userPassInput.value}`);
+  );
 
-    login(userNameInput.value, userPassInput.value);
+// loginBtn.addEventListener('click', function(){
+//     console.log(`Init username: ${userNameInput.value} and password:${userPassInput.value}`);
 
-});
+//     login(userNameInput.value, userPassInput.value);
+
+// });
 
 
 

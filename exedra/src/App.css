@@ -1,12 +1,15 @@
 #root {
+  min-width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem 2rem;
+
   text-align: center;
+  
 }
 
 .logo {
-  height: 6em;
+  height: 16em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
@@ -39,4 +42,161 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.red{
+  color: red;
+}
+.blue{
+  color: blue;
+}
+.separator{
+  display: block;
+  background-image: linear-gradient(90deg,#FD5D08 0%,#E92631 4%,#432680 50%,#00B2DB 100%);
+  width: 100%;
+  line-height: 1;
+}
+header{
+  width: 100%;
+}
+.header{
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+.logoSchreder{
+  width: 151px;
+  margin: 2.25rem 0;
+}
+.headerBody{
+  margin: 0 20px;
+  max-width: 1000px;
+  width: 100%;
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  place-content: flex-start;
+  align-items: flex-start;
+}
+.spaceLogo{
+  flex: 1 1 0%;
+  box-sizing: border-box;
+}
+.mainLogo{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center flex-start;
+  align-items: center;
+  flex: 1 1 1e-09px;
+  background: rgb(192, 192, 181) url("https://hyperion.schreder-exedra.com/login/assets/Schreder-brings-meaningful-moments-to-people.jpeg") center center / cover no-repeat fixed;
+
+}
+.loginBox{
+
+  
+  width: 26em;
+    background-color: #f0f0f0f2;
+    padding: 44px 44px 0px 44px;
+    font: 500 16px / 23px work_sans, Helvetica, Arial, sans-serif;
+    letter-spacing: normal;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 0%;
+
+}
+.signInLogo{
+  flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    height: 8em;
+    margin-bottom: 1em;
+    
+}
+.signInPic{
+  height: 100%;
+  max-width: 100%;
+}
+.signInPic img{
+  max-height: 100%;
+  border: 0;
+  height: auto;
+  line-height: 0;
+  display: inline-block;
+  transition: all .5s ease-out;
+  vertical-align: middle;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.signInSpace{
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: stretch flex-start;
+  align-items: stretch;
+  max-width: 100%;
+  font: 500 16px/23px work_sans,Helvetica,Arial,sans-serif;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+  padding: 20px;
+  color: #363636;
+  background-color: #f0f0f0f2;
+  width: 26em;
+
+}
+.signInTitle{
+  font-weight: 400;
+    margin-bottom: 6px;
+    text-transform: capitalize;
+    font: 600 22px / 32px work_sans, Helvetica, Arial, sans-serif;
+    letter-spacing: normal;
+    margin: 0 0 16px;
+}
+.signInEmail{
+  width: 100%;
+  display: inline-block;
+    position: relative;
+    text-align: left;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.125;
+    font-family: work_sans, Helvetica, Arial, sans-serif;
+    letter-spacing: normal;
+    background-color: #fff;
+   
+    
+}
+.signInEmailField{
+    font: inherit;
+    background-color: #fff;
+    background: rgba(0, 0, 0, 0);
+    color: currentColor; 
+    border: none;
+    outline: none;
+    padding: 0;
+    margin-left: 20px;
+    width: 100%;
+    max-width: 100%;
+    vertical-align: bottom;
+    text-align: inherit;
+    box-sizing: content-box;
+    padding: 20px 0;
+}
+.signInButtonZone{
+  padding: 20px 0;
+}
+.signInButton{
+  width: 100%;
+}
+.signInFooter{
+  font-size: 0.75rem;
+  text-align: center;
 }
