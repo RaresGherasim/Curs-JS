@@ -216,6 +216,7 @@ button.react:hover {
   row-gap: 5px;
   list-style-type: none;
   overflow: auto;
+  padding: 1rem;
 }
 .deviceInfoZone{
   display: flex;
