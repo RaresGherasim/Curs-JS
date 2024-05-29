@@ -7,7 +7,7 @@ export class Device {
       this.coords = coords;
       this.failures = failures;
       this.configuration = configuration;
-      this.metering = metering
+      this.metering = metering;
     }
   }
   

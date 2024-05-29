@@ -1,14 +1,15 @@
 import { devicesList } from '../DeviceDB.js';
+import DeviceButton from './DeviceButton.jsx';
+import PropTypes from 'prop-types'
 
-function DevicesList() {
+function DevicesList({ handleClick }) {
 
     return(
         <section>
-            <ul>
-                { devicesList.map((device) => (
-                    <li key = {device.id}>
-                        <button className='deviceButton'> { device.name } </button>
-                    </li>
+            <ul className='deviceListButtons'>
+                { devicesList.map((deviceAtt) => (
+                
+                    <DeviceButton deviceId={deviceAtt.id} onClick={handleClick} deviceElem = {deviceAtt} key = {deviceAtt.id} />
                 )) }
             </ul>
         </section>
@@ -17,3 +18,6 @@ function DevicesList() {
     
     export default DevicesList;
 
+    DevicesList.propTypes = {  
+        handleClick: PropTypes.func,
+    }
