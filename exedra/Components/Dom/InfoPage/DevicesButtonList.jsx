@@ -9,7 +9,10 @@ function DevicesList({ handleClick }) {
             <ul className='deviceListButtons'>
                 { devicesList.map((deviceAtt) => (
                 
-                    <DeviceButton deviceId={deviceAtt.id} onClick={handleClick} deviceElem = {deviceAtt} key = {deviceAtt.id} />
+                    <DeviceButton deviceId={deviceAtt.id}
+                     onClick={handleClick}
+                      deviceElem = {deviceAtt}
+                       key = {deviceAtt.id} />
                 )) }
             </ul>
         </section>

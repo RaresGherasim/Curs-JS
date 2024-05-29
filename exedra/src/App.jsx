@@ -9,6 +9,12 @@ import DevicesList from "../Components/Dom/InfoPage/DevicesButtonList";
 import DeviceInfo from "../Components/Dom/InfoPage/DeviceInfo";
 import { devicesList } from "../Components/Dom/DeviceDB";
 import InfoPage from "../Components/Dom/InfoPage/InfoPage";
+import LoginPage from "../Components/Dom/LoginPage/LoginPage";
+import DeviceMetering from "../Components/Dom/InfoPage/DeviceMetering";
+import MeteringPage from "../Components/Dom/InfoPage/MeteringPage";
+import FailuresPage from "../Components/Dom/InfoPage/FailuresPage";
+import StatusPage from "../Components/Dom/InfoPage/StatusPage";
+import ConfigurationPage from "../Components/Dom/InfoPage/ConfigurationPage";
 
 export const DeviceContext = React.createContext();
 export const AuthContext = React.createContext();
@@ -33,15 +39,15 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="hello" element={<h1>Hello World</h1>}></Route>
-          <Route path="search" element={<h1>Search</h1>}></Route>
-          <Route path="info" element={<InfoPage />}></Route>
+          <Route path="login" element={<LoginPage />}></Route>
+          <Route path="/info/:idFromPath" element={<InfoPage />}></Route>
+          <Route path="/metering/:idFromPath" element={<MeteringPage />}></Route>
+          <Route path="/failures/:idFromPath" element={<FailuresPage />}></Route>
+          <Route path="/status/:idFromPath" element={<StatusPage />}></Route>
+          <Route path="/configuration/:idFromPath" element={<ConfigurationPage />}></Route>
+         
         </Routes>
       </BrowserRouter>
-
-      
-      {/* <Header />
-      <LogInComp/> */}
 
 
       <h1>

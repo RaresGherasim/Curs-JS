@@ -1,15 +1,18 @@
 import PropTypes from "prop-types";
+import { Link, useParams } from 'react-router-dom';
 
-function DeviceButton({ deviceElem, deviceId, onClick }) {
-  return (
-    <li key={deviceElem.id}>
-      <button onClick={() => onClick(deviceId)} 
-        className="deviceButton">
-        {deviceElem.name}
-      </button>
-    </li>
-  );
-}
+function DeviceButton({ deviceElem, deviceId }) {
+   
+    return (
+        <li key={deviceElem.id}>
+          <Link to={`/info/${deviceId}`}> 
+            <button className="deviceButton">
+              {deviceElem.name}
+            </button>
+          </Link>
+        </li>
+      );
+    }
 
 export default DeviceButton;
 
