@@ -33,6 +33,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="login" element={<LoginPage />}></Route>
+          <Route path="/info/info/:idFromPath" element={<InfoPage />}></Route>
+          <Route path="/info/metering/:idFromPath" element={<MeteringPage />}></Route>
+          <Route path="/info/failures/:idFromPath" element={<FailuresPage />}></Route>
+          <Route path="/info/status/:idFromPath" element={<StatusPage />}></Route>
+          <Route path="/info/configuration/:idFromPath" element={<ConfigurationPage />}></Route>
+        
           <Route path="/info/:idFromPath" element={<InfoPage />}></Route>
           <Route path="/metering/:idFromPath" element={<MeteringPage />}></Route>
           <Route path="/failures/:idFromPath" element={<FailuresPage />}></Route>

@@ -7,6 +7,6 @@ export default async function getSimDevice(deviceID) {
     },
   });
 
-  let data2 = await response.json();
-  return data2;
+  let data = await response.json();
+  return data;
 }
