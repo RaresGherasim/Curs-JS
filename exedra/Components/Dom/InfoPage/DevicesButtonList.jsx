@@ -3,7 +3,7 @@ import DeviceButton from './DeviceButton.jsx';
 import PropTypes from 'prop-types'
 
 function DevicesList({ handleClick }) {
-
+    
     return(
         <section>
             <ul className='deviceListButtons'>

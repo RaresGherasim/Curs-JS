@@ -15,9 +15,13 @@ export default async function getAddress(lat, long, key){
 
       });
 
-      let addressData = await response;
-      console.log(addressData);
-      let data = await addressData.json();
-      console.log(data.results[0].formatted_address);
+      let addressData = await response.json();
+      // console.dir(addressData);
+      let data = await addressData;
+      // console.dir(data.results);
+
+      let adr = data.results[0].formatted_address;
+      // console.log(`Test ${data.results[0].formatted_address}`);
+      return adr;
 }
 

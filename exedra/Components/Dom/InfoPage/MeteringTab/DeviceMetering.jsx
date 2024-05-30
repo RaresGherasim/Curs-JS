@@ -13,7 +13,7 @@ return(
         <div>Device Id : {device.id} </div>
         <div>Device Name : {device.name} </div>
 
-        <div>Device Metering : {device.metering} </div>       
+        <div>Device Metering : {device.metering.toString()} </div>       
     </div>
 )
 }
