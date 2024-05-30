@@ -1,7 +1,4 @@
-import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { devicesList } from "../DeviceDB";
-
 
 function OptionButtons(){
     const navigate = useNavigate();

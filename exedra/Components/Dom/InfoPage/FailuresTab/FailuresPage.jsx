@@ -1,10 +1,10 @@
 import { useState } from "react";
-import DevicesList from "./DevicesButtonList"
-import OptionButtons from "./OptionButtons";
-import DeviceMetering from "./DeviceMetering";
+import DevicesList from "../DevicesButtonList"
+import OptionButtons from "../OptionButtons";
+import DeviceFailures from "./DeviceFailures";
 
 
-function MeteringPage() {
+function FailuresPage() {
     const [selectedDeviceId, setSelectedDeviceId] = useState(null);
     
     const handleDeviceClick = (deviceId) => {
@@ -18,13 +18,13 @@ function MeteringPage() {
         </div>
         <div className="deviceInfoZone">
             <OptionButtons/>
-          Metering Page
+          Failures Page
           <br />
           <br />
-          <DeviceMetering deviceId={selectedDeviceId} />
+          <DeviceFailures deviceId={selectedDeviceId} />
         </div>
     </div>
     )
 }
 
-export default MeteringPage
+export default FailuresPage

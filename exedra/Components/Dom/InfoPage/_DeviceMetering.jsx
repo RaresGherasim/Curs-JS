@@ -2,10 +2,10 @@ import { useParams } from 'react-router-dom';
 import { devicesList } from '../DeviceDB.js';
 import PropTypes from 'prop-types'
 
-function DeviceInfo() {
+function DeviceMetering() {
+
     const {idFromPath} = useParams();
     const selectedDevice = devicesList.find((device) => device.id == idFromPath);
-    console.log(`Id from path ${idFromPath}`);
     let device = selectedDevice;
 
 return(
@@ -21,9 +21,9 @@ return(
 )
 }
 
-export default DeviceInfo;
+export default DeviceMetering;
 
-DeviceInfo.propTypes = {
+DeviceMetering.propTypes = {
     deviceId: PropTypes.string,
 }
 

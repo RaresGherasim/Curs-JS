@@ -1,20 +1,13 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 // import { GoogleMap, LoadScript, OverlayView } from "@react-google-maps/api";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "../Components/Dom/LoginPage/Header";
-import LogInComp from "../Components/Dom/LoginPage/LoginCom";
-import DevicesList from "../Components/Dom/InfoPage/DevicesButtonList";
-import DeviceInfo from "../Components/Dom/InfoPage/DeviceInfo";
-import { devicesList } from "../Components/Dom/DeviceDB";
-import InfoPage from "../Components/Dom/InfoPage/InfoPage";
+import InfoPage from "../Components/Dom/InfoPage/InfoTab/InfoPage";
 import LoginPage from "../Components/Dom/LoginPage/LoginPage";
-import DeviceMetering from "../Components/Dom/InfoPage/DeviceMetering";
-import MeteringPage from "../Components/Dom/InfoPage/MeteringPage";
-import FailuresPage from "../Components/Dom/InfoPage/FailuresPage";
-import StatusPage from "../Components/Dom/InfoPage/StatusPage";
-import ConfigurationPage from "../Components/Dom/InfoPage/ConfigurationPage";
+import MeteringPage from "../Components/Dom/InfoPage/MeteringTab/MeteringPage";
+import FailuresPage from "../Components/Dom/InfoPage/FailuresTab/FailuresPage";
+import StatusPage from "../Components/Dom/InfoPage/StatusTab/StatusPage";
+import ConfigurationPage from "../Components/Dom/InfoPage/ConfigurationTab/ConfigurationPage";
 
 export const DeviceContext = React.createContext();
 export const AuthContext = React.createContext();

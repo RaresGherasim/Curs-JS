@@ -1,12 +1,11 @@
 import { useParams } from 'react-router-dom';
-import { devicesList } from '../DeviceDB.js';
+import { devicesList } from '../../DeviceDB.js';
 import PropTypes from 'prop-types'
 
-function DeviceMetering() {
+function DeviceInfo() {
 
     const {idFromPath} = useParams();
     const selectedDevice = devicesList.find((device) => device.id == idFromPath);
-   
     let device = selectedDevice;
 
 return(
@@ -14,17 +13,14 @@ return(
         <div>Device Id : {device.id} </div>
         <div>Device Name : {device.name} </div>
         <div>Device Address : {device.address} </div>
-        <div>Device Coordinates : {device.coords} </div>
-        <div>Device Failures : {device.failures} </div>
-        <div>Device Configuration : {device.configuration} </div>
-        <div>Device Metering : {device.metering} </div>       
+        <div>Device Coordinates : {device.coords} </div>    
     </div>
 )
 }
 
-export default DeviceMetering;
+export default DeviceInfo;
 
-DeviceMetering.propTypes = {
+DeviceInfo.propTypes = {
     deviceId: PropTypes.string,
 }
 
