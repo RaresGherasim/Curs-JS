@@ -4,7 +4,7 @@ function OptionButtons(){
     const navigate = useNavigate();
     const {idFromPath} = useParams();
     const handleButtonClick = (option) => {
-        navigate(`/${option}/${idFromPath}`); 
+        navigate(`/info/${option}/${idFromPath}`); 
       };
     return (
         <div className="optionButtons">

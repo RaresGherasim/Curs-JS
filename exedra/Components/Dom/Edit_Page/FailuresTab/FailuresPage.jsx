@@ -1,11 +1,10 @@
 import { useState } from "react";
 import DevicesList from "../DevicesButtonList"
 import OptionButtons from "../OptionButtons";
+import DeviceFailures from "./DeviceFailures";
 
-import DeviceStatus from "./DeviceStatus";
 
-
-function StatusPage() {
+function FailuresPage() {
     const [selectedDeviceId, setSelectedDeviceId] = useState(null);
     
     const handleDeviceClick = (deviceId) => {
@@ -19,13 +18,13 @@ function StatusPage() {
         </div>
         <div className="deviceInfoZone">
             <OptionButtons/>
-          Status Page
+          Failures Page
           <br />
           <br />
-          <DeviceStatus deviceId={selectedDeviceId} />
+          <DeviceFailures deviceId={selectedDeviceId} />
         </div>
     </div>
     )
 }
 
-export default StatusPage
+export default FailuresPage

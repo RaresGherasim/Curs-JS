@@ -39,11 +39,11 @@ function App() {
           <Route path="/info/status/:idFromPath" element={<StatusPage />}></Route>
           <Route path="/info/configuration/:idFromPath" element={<ConfigurationPage />}></Route>
         
-          <Route path="/info/:idFromPath" element={<InfoPage />}></Route>
-          <Route path="/metering/:idFromPath" element={<MeteringPage />}></Route>
-          <Route path="/failures/:idFromPath" element={<FailuresPage />}></Route>
-          <Route path="/status/:idFromPath" element={<StatusPage />}></Route>
-          <Route path="/configuration/:idFromPath" element={<ConfigurationPage />}></Route>
+          <Route path="/edit/info/:idFromPath" element={<InfoPage />}></Route>
+          <Route path="/edit/metering/:idFromPath" element={<MeteringPage />}></Route>
+          <Route path="/edit/failures/:idFromPath" element={<FailuresPage />}></Route>
+          <Route path="/edit/status/:idFromPath" element={<StatusPage />}></Route>
+          <Route path="/edit/configuration/:idFromPath" element={<ConfigurationPage />}></Route>
          
         </Routes>
       </BrowserRouter>

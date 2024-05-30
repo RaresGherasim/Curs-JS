@@ -1,9 +1,9 @@
-import { useParams } from 'react-router-dom';
-
 import { useEffect, useState } from 'react';
-import getSimDevice from '../../../GetFromDb/GetSimDevice.jsx';
+import { useParams } from 'react-router-dom';
+import getSimDevice from '../../../GetFromDb/GetSimDevice';
 
-function DeviceConfiguration() {
+
+function DeviceStatus() {
 
     const {idFromPath} = useParams();
     var [device, setDevice] = useState([]);
@@ -21,8 +21,9 @@ function DeviceConfiguration() {
         return <p>Error fetching device information.</p>;
       }
     
-      const dimming = device.configuration?.dimmingType || ""; 
-      const luminaire = device.configuration?.luminaireSpecification || "";
+      let status = device.status || "Null";
+
+
     
 return(
     <div className='deviceInfoZone'>
@@ -34,18 +35,16 @@ return(
       <label htmlFor="deviceName">Device Name:</label>
         <span name="deviceName"> {device.name} </span>
       </div>
-      <div className="device__Luminaire">
-        <label htmlFor="deviceLuminaire">Device Luminaire:</label>
-        <span name="deviceLuminaire"> {luminaire} </span>
+      <div className="device__Status">
+        <label htmlFor="deviceStatus">Device Status: </label>
+        <span name="deviceFailures"> {status} </span>
       </div>
-      <div className="device__dimming">
-        <label htmlFor="deviceDimming">Device dimming:</label>
-        <span name="deviceDimming"> {dimming} </span>
-      </div>
+
      
     </div>
 )
 }
 
-export default DeviceConfiguration;
+export default DeviceStatus;
+
 
