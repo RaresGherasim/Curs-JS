@@ -8,6 +8,13 @@ import MeteringPage from "../Components/Dom/InfoPage/MeteringTab/MeteringPage";
 import FailuresPage from "../Components/Dom/InfoPage/FailuresTab/FailuresPage";
 import StatusPage from "../Components/Dom/InfoPage/StatusTab/StatusPage";
 import ConfigurationPage from "../Components/Dom/InfoPage/ConfigurationTab/ConfigurationPage";
+import EditInfoPage from "../Components/Dom/Edit_Page/InfoTab/InfoPage";
+import EditConfigurationPage from "../Components/Dom/Edit_Page/ConfigurationTab/ConfigurationPage";
+import EditFailuresPage from "../Components/Dom/Edit_Page/FailuresTab/FailuresPage";
+import EditMeteringPage from "../Components/Dom/Edit_Page/MeteringTab/MeteringPage";
+import Header from "../Components/Dom/LoginPage/Header";
+import Footer from "../Components/Dom/InfoPage/Footer";
+
 
 export const DeviceContext = React.createContext();
 export const AuthContext = React.createContext();
@@ -30,24 +37,27 @@ function App() {
 
   return (
     <>
+    <div className="mainPage">
+      <Header></Header>
       <BrowserRouter>
         <Routes>
           <Route path="login" element={<LoginPage />}></Route>
-          <Route path="/info/info/:idFromPath" element={<InfoPage />}></Route>
-          <Route path="/info/metering/:idFromPath" element={<MeteringPage />}></Route>
-          <Route path="/info/failures/:idFromPath" element={<FailuresPage />}></Route>
-          <Route path="/info/status/:idFromPath" element={<StatusPage />}></Route>
-          <Route path="/info/configuration/:idFromPath" element={<ConfigurationPage />}></Route>
+          <Route path="/view/info/:idFromPath" element={<InfoPage />}></Route>
+          <Route path="/view/metering/:idFromPath" element={<MeteringPage />}></Route>
+          <Route path="/view/failures/:idFromPath" element={<FailuresPage />}></Route>
+          <Route path="/view/status/:idFromPath" element={<StatusPage />}></Route>
+          <Route path="/view/configuration/:idFromPath" element={<ConfigurationPage />}></Route>
         
-          <Route path="/edit/info/:idFromPath" element={<InfoPage />}></Route>
-          <Route path="/edit/metering/:idFromPath" element={<MeteringPage />}></Route>
-          <Route path="/edit/failures/:idFromPath" element={<FailuresPage />}></Route>
+          <Route path="/edit/info/:idFromPath" element={<EditInfoPage />}></Route>
+          <Route path="/edit/metering/:idFromPath" element={<EditMeteringPage />}></Route>
+          <Route path="/edit/failures/:idFromPath" element={<EditFailuresPage />}></Route>
           <Route path="/edit/status/:idFromPath" element={<StatusPage />}></Route>
-          <Route path="/edit/configuration/:idFromPath" element={<ConfigurationPage />}></Route>
+          <Route path="/edit/configuration/:idFromPath" element={<EditConfigurationPage />}></Route>
          
         </Routes>
-      </BrowserRouter>
 
+      </BrowserRouter>
+    </div>
 
       <h1>
         <p className={className}>Hello</p>

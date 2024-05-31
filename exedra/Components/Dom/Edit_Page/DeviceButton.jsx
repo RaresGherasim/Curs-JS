@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function DeviceButton({ deviceElem, deviceId }) {
+function EditDeviceButton({ deviceElem, deviceId }) {
    
     return (
         <li key={deviceElem.id}>
-          <Link to={`/info/${deviceId}`}> 
+          <Link to={`/edit/info/${deviceId}`}> 
             <button className="deviceButton">
               {deviceElem.name}
             </button>
@@ -14,9 +14,9 @@ function DeviceButton({ deviceElem, deviceId }) {
       );
     }
 
-export default DeviceButton;
+export default EditDeviceButton;
 
-DeviceButton.propTypes = {
+EditDeviceButton.propTypes = {
   deviceElem: PropTypes.shape({
     id: PropTypes.string,
     name: PropTypes.string,

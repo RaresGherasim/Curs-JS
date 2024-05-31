@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom';
-// import { devicesList } from '../../DeviceDB.js';
 import { useEffect, useState } from 'react';
 import getSimDevice from '../../../GetFromDb/GetSimDevice.jsx';
 

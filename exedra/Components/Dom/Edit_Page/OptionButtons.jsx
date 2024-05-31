@@ -1,14 +1,14 @@
 import { useNavigate, useParams } from 'react-router-dom';
 
-function OptionButtons(){
+function EditOptionButtons(){
     const navigate = useNavigate();
     const {idFromPath} = useParams();
     const handleButtonClick = (option) => {
-        navigate(`/${option}/${idFromPath}`); 
+        navigate(`/edit/${option}/${idFromPath}`); 
       };
     return (
         <div className="optionButtons">
-          <button onClick={() => handleButtonClick('info')}>Info</button>
+          <button onClick={() => handleButtonClick('info')}>Informations</button>
           <button onClick={() => handleButtonClick('metering')}>Metering</button>
           <button onClick={() => handleButtonClick('failures')}>Failures</button>
           <button onClick={() => handleButtonClick('configuration')}>Configuration</button>
@@ -18,4 +18,4 @@ function OptionButtons(){
     }
     
 
-export default OptionButtons
+export default EditOptionButtons

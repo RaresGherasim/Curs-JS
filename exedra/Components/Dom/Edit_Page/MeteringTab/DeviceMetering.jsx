@@ -8,6 +8,38 @@ function DeviceMetering() {
     const {idFromPath} = useParams();
     var [device, setDevice] = useState([]);
 
+    function saveDevice(event){
+
+      const formElem = event.target;
+      console.log(formElem);
+      const { deviceActivePower, deviceEnergy} = formElem;
+      const editedParams = {
+        "metering": {
+          "activeEnergy": {
+              "value": deviceEnergy?.value
+          },
+          "activePower": {
+              "value": deviceActivePower?.value
+          }
+      }}
+  
+
+      console.log(editedParams);
+  
+      fetch(`http://localhost:3000/devicesSim/${idFromPath}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            // Authorization: `Bearer ${auth}`,
+          },
+          body: JSON.stringify(editedParams),
+  
+        })
+        .then(() => console.log('Device was modified!'))
+    
+        formElem.reset();
+      } 
+
     useEffect(() => {
         getSimDevice(idFromPath).then((dev) => setDevice(dev));
       }, [idFromPath]); 
@@ -21,11 +53,10 @@ function DeviceMetering() {
         return <p>Error fetching device information.</p>;
       }
     
-      let energy = device.metering?.activeEnergy?.value || "Null";
-      let power = device.metering?.activePower?.value || "Null";
 
 return(
     <div className='deviceInfoZone'>
+      <form onSubmit={saveDevice}>
       <div className="device__id">
         <label htmlFor="deviceId">Device ID:</label>
         <span name="deviceId"> {device.id} </span>
@@ -36,13 +67,26 @@ return(
       </div>
       <div className="device__Energy">
         <label htmlFor="deviceEnergy">Device Energy: </label>
-        <span name="deviceEnergy"> {energy} </span>
+        <input
+          name="deviceEnergy"
+          id="deviceEnergy"
+          type="text"
+          defaultValue={device.metering?.activeEnergy?.value}
+          />
       </div>
-      <div className="device__dimming">
-        <label htmlFor="deviceDimming">Device Active Power:</label>
-        <span name="deviceDimming"> {power} </span>
+      <div className="device__ActivePower">
+      <label htmlFor="deviceActivePower">Device Active Power: </label>
+        <input
+          name="deviceActivePower"
+          id="deviceActivePower"
+          type="text"
+          defaultValue={device.metering?.activePower?.value}
+          />
       </div>
-     
+      <br />
+      <br />
+      <button>Save device</button>
+      </form>
     </div>
 )
 }

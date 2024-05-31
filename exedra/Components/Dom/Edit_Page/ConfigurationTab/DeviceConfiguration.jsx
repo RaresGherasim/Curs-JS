@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import getSimDevice from '../../../GetFromDb/GetSimDevice.jsx';
 
-function DeviceConfiguration() {
+function EditDeviceConfiguration() {
 
     const {idFromPath} = useParams();
     var [device, setDevice] = useState([]);
@@ -47,5 +47,5 @@ return(
 )
 }
 
-export default DeviceConfiguration;
+export default EditDeviceConfiguration;
 

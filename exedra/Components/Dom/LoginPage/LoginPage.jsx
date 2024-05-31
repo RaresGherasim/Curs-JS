@@ -4,7 +4,7 @@ import LogInComp from "./LoginCom";
 function LoginPage() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <LogInComp />
     </div>
   );

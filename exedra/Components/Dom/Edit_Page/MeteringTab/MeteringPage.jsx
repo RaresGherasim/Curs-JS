@@ -2,9 +2,10 @@ import { useState } from "react";
 import OptionButtons from "../OptionButtons";
 import DevicesList from "../DevicesButtonList";
 import DeviceMetering from "./DeviceMetering";
+import EditFooter from "../EditFooter";
 
 
-function MeteringPage() {
+function EditMeteringPage() {
     const [selectedDeviceId, setSelectedDeviceId] = useState(null);
     
     const handleDeviceClick = (deviceId) => {
@@ -12,6 +13,8 @@ function MeteringPage() {
       };
 
     return (
+      <div>
+
     <div className="infoPage">
         <div className="deviceListZone">
           <DevicesList handleClick={handleDeviceClick} />
@@ -23,8 +26,10 @@ function MeteringPage() {
           <br />
           <DeviceMetering deviceId={selectedDeviceId} />
         </div>
+      </div>
+      <EditFooter />
     </div>
     )
 }
 
-export default MeteringPage
+export default EditMeteringPage

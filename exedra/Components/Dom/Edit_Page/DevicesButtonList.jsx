@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
 import getAllSimDevices from '../../GetFromDb/GetAllSimDevices.jsx';
-// import { devicesList } from '../DeviceDB.js';
-import DeviceButton from './DeviceButton.jsx';
 import PropTypes from 'prop-types'
+import EditDeviceButton from './DeviceButton.jsx';
 
-function DevicesList({ handleClick }) {
+function EditDevicesList({ handleClick }) {
     getAllSimDevices;
 
     const [allDevices, setDevice] = useState([]);
@@ -18,7 +17,7 @@ function DevicesList({ handleClick }) {
             <ul className='deviceListButtons'>
                 { allDevices.map((deviceAtt) => (
                 
-                    <DeviceButton deviceId={deviceAtt.id}
+                    <EditDeviceButton deviceId={deviceAtt.id}
                      onClick={handleClick}
                       deviceElem = {deviceAtt}
                        key = {deviceAtt.id} />
@@ -28,8 +27,8 @@ function DevicesList({ handleClick }) {
     )
     }
     
-    export default DevicesList;
+    export default EditDevicesList;
 
-    DevicesList.propTypes = {  
+    EditDevicesList.propTypes = {  
         handleClick: PropTypes.func,
     }

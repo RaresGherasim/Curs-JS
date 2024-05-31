@@ -2,6 +2,7 @@ import { useState } from "react";
 import OptionButtons from "../OptionButtons";
 import DevicesList from "../DevicesButtonList";
 import DeviceMetering from "./DeviceMetering";
+import Footer from "../Footer";
 
 
 function MeteringPage() {
@@ -12,6 +13,7 @@ function MeteringPage() {
       };
 
     return (
+      <div>
     <div className="infoPage">
         <div className="deviceListZone">
           <DevicesList handleClick={handleDeviceClick} />
@@ -22,7 +24,11 @@ function MeteringPage() {
           <br />
           <br />
           <DeviceMetering deviceId={selectedDeviceId} />
-        </div>
+          <br />
+        <br />
+      </div>
+    </div>
+      <Footer />
     </div>
     )
 }

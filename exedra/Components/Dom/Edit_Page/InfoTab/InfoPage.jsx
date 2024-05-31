@@ -1,9 +1,10 @@
 import { useState } from "react";
-import DevicesList from "../DevicesButtonList";
-import OptionButtons from "../OptionButtons";
 import DeviceInfo from "./DeviceInfo";
+import EditOptionButtons from "../OptionButtons";
+import EditDevicesList from "../DevicesButtonList";
+import EditFooter from "../EditFooter";
 
-function InfoPage() {
+function EditInfoPage() {
   const [selectedDeviceId, setSelectedDeviceId] = useState(null);
 
   const handleDeviceClick = (deviceId) => {
@@ -11,19 +12,23 @@ function InfoPage() {
   };
 
   return (
+    <div>
+
     <div className="infoPage">
       <div className="deviceListZone">
-        <DevicesList handleClick={handleDeviceClick} />
+        <EditDevicesList handleClick={handleDeviceClick} />
       </div>
       <div className="deviceInfoZone">
-        <OptionButtons deviceId={selectedDeviceId} />
-        Info Page
+        <EditOptionButtons deviceId={selectedDeviceId} />
+        Informations Page
         <br />
         <br />
         <DeviceInfo deviceId={selectedDeviceId} />
       </div>
     </div>
+    <EditFooter/>
+    </div>
   );
 }
 
-export default InfoPage;
+export default EditInfoPage;

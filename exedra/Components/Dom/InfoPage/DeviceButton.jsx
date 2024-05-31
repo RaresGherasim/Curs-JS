@@ -5,7 +5,7 @@ function DeviceButton({ deviceElem, deviceId }) {
    
     return (
         <li key={deviceElem.id}>
-          <Link to={`/info/info/${deviceId}`}> 
+          <Link to={`/view/info/${deviceId}`}> 
             <button className="deviceButton">
               {deviceElem.name}
             </button>

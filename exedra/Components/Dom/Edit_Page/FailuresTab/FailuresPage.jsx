@@ -2,9 +2,10 @@ import { useState } from "react";
 import DevicesList from "../DevicesButtonList"
 import OptionButtons from "../OptionButtons";
 import DeviceFailures from "./DeviceFailures";
+import EditFooter from "../EditFooter";
 
 
-function FailuresPage() {
+function EditFailuresPage() {
     const [selectedDeviceId, setSelectedDeviceId] = useState(null);
     
     const handleDeviceClick = (deviceId) => {
@@ -12,6 +13,8 @@ function FailuresPage() {
       };
 
     return (
+      <div>
+
     <div className="infoPage">
         <div className="deviceListZone">
           <DevicesList handleClick={handleDeviceClick} />
@@ -23,8 +26,10 @@ function FailuresPage() {
           <br />
           <DeviceFailures deviceId={selectedDeviceId} />
         </div>
+      </div>
+      <EditFooter />
     </div>
     )
 }
 
-export default FailuresPage
+export default EditFailuresPage

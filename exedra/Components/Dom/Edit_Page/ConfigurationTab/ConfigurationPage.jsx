@@ -1,31 +1,34 @@
 import { useState } from "react";
-import DevicesList from "../DevicesButtonList"
-import OptionButtons from "../OptionButtons";
+import EditDevicesList from "../DevicesButtonList";
+import EditOptionButtons from "../OptionButtons";
+import EditDeviceConfiguration from "./DeviceConfiguration";
+import EditFooter from "../EditFooter";
 
-import DeviceConfiguration from "./DeviceConfiguration";
+function EditConfigurationPage() {
+  const [selectedDeviceId, setSelectedDeviceId] = useState(null);
 
+  const handleDeviceClick = (deviceId) => {
+    setSelectedDeviceId(deviceId);
+  };
 
-function ConfigurationPage() {
-    const [selectedDeviceId, setSelectedDeviceId] = useState(null);
-    
-    const handleDeviceClick = (deviceId) => {
-        setSelectedDeviceId(deviceId);
-      };
+  return (
+    <div>
 
-    return (
     <div className="infoPage">
-        <div className="deviceListZone">
-          <DevicesList handleClick={handleDeviceClick} />
-        </div>
-        <div className="deviceInfoZone">
-            <OptionButtons/>
-          Configuration Page
-          <br />
-          <br />
-          <DeviceConfiguration deviceId={selectedDeviceId} />
-        </div>
+      <div className="deviceListZone">
+        <EditDevicesList handleClick={handleDeviceClick} />
+      </div>
+      <div className="deviceInfoZone">
+        <EditOptionButtons deviceId={selectedDeviceId} />
+        Configuration Page
+        <br />
+        <br />
+        <EditDeviceConfiguration deviceId={selectedDeviceId} />
+      </div>
     </div>
-    )
+    <EditFooter/>
+    </div>
+  );
 }
 
-export default ConfigurationPage
+export default EditConfigurationPage;

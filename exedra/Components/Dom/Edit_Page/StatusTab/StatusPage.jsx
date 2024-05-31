@@ -3,6 +3,7 @@ import DevicesList from "../DevicesButtonList"
 import OptionButtons from "../OptionButtons";
 
 import DeviceStatus from "./DeviceStatus";
+import EditFooter from "../EditFooter";
 
 
 function StatusPage() {
@@ -13,6 +14,8 @@ function StatusPage() {
       };
 
     return (
+      <div>
+
     <div className="infoPage">
         <div className="deviceListZone">
           <DevicesList handleClick={handleDeviceClick} />
@@ -24,6 +27,8 @@ function StatusPage() {
           <br />
           <DeviceStatus deviceId={selectedDeviceId} />
         </div>
+      </div>
+      <EditFooter />
     </div>
     )
 }
