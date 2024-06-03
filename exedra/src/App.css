@@ -114,8 +114,8 @@ header{
   display: inline-block;
   transition: all .5s ease-out;
   vertical-align: middle;
-  overflow-clip-margin: content-box;
-  overflow: clip;
+
+  
 }
 .signInSpace{
   flex-direction: column;
@@ -263,5 +263,19 @@ label{
   color: white;
 }
 .deleteDevicePage{
-  height: 77vh;
+  height: 70vh;
+}
+.newUser{
+  padding: 20px;
+  width: 600px;
+  margin: auto;
+  height: 75vh;
+}
+.registerInButtonZone{
+  width: 70%;
+  display: flex;
+}
+.registerInButton{
+  background-color: gray;
+
 }

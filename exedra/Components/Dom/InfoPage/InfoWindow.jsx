@@ -26,7 +26,7 @@ function InfoWindowSpan({ spanText, infoText }) {
 export default InfoWindowSpan;
 
 InfoWindowSpan.propTypes = {
-    spanText: PropTypes.text,
-    infoText: PropTypes.text
+    spanText: PropTypes.any,
+    infoText: PropTypes.any
     
   };

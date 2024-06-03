@@ -5,7 +5,7 @@ import DeviceButton from './DeviceButton.jsx';
 import PropTypes from 'prop-types'
 
 function DevicesList({ handleClick }) {
-    getAllSimDevices;
+    // getAllSimDevices;
 
     const [allDevices, setDevice] = useState([]);
 

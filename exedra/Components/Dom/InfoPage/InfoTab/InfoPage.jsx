@@ -22,7 +22,7 @@ function InfoPage() {
       </div>
       <div className="deviceInfoZone">
         <OptionButtons deviceId={selectedDeviceId} />
-        Info Page
+        Informations Page
         <br />
         <br />
         <DeviceInfo deviceId={selectedDeviceId} />

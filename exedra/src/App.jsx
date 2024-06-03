@@ -19,15 +19,27 @@ import NewDevicePage from "../Components/Dom/NewDevicePage/NewDevicePage";
 // import NewDeviceInterface from "../Components/Dom/NewDevicePage/NewDeviceInterface";
 import DeleteDevicePage from "../Components/Dom/DeleteDevicePage/DeleteDevicePage";
 import FirstPage from "../Components/Dom/FirstPage/FirstPage";
+// import Map from "../Components/Maps/Test1";
+// import TestMap from "../Components/Maps/test3";
+import MapContainer from "../Components/Maps/test4";
+import { Register } from "../Components/Dom/UsersPage/NewUser/newUser";
+import ManageUsersPage from "../Components/Dom/UsersPage/ManageUsers/ManageUsersPage";
+import NewUserPage from "../Components/Dom/UsersPage/NewUser/newUserPage";
+import DeleteUserPage from "../Components/Dom/UsersPage/DeleteUser/DeleteUserPage";
+
 
 export const DeviceContext = React.createContext();
 export const AuthContext = React.createContext();
+export const Rights = React.createContext();
 
 function App() {
   const accessToken = localStorage.getItem("accessToken");
+  const userRightsVal = localStorage.getItem("userRightsVal");
+  
   // const [devices, setDevices] = useState([]);
   const [auth, setAuth] = useState(accessToken);
-
+  const [userRights, setUserRights] = useState(userRightsVal);
+  
 
   // const [selectedDeviceId, setSelectedDeviceId] = useState(null);
 
@@ -39,6 +51,7 @@ function App() {
     <>
       <div className="mainPage">
       <AuthContext.Provider value={{ auth, setAuth }}>
+      <AuthContext.Provider value={{ userRights, setUserRights }}>
         <BrowserRouter>
         <Header/>
           <Routes>
@@ -105,8 +118,29 @@ function App() {
               path="view/info/undefined"
               element={<FirstPage />}
             ></Route>
+            <Route 
+              path="users/view/undefined"
+              element={<FirstPage />}
+            ></Route>
+            <Route 
+              path="/users/newuser/*"
+              element={<NewUserPage />}
+            ></Route>
+            <Route 
+              path="/manageUsers/info/*"
+              element={<ManageUsersPage />}
+            ></Route>
+            <Route 
+              path="/users/delete/:idFromPath"
+              element={<DeleteUserPage />}
+            ></Route>
+            <Route 
+              path="map3"
+              element={<MapContainer lat={47} lng={25} />}
+            ></Route>
           </Routes>
         </BrowserRouter>
+        </AuthContext.Provider>
         </AuthContext.Provider>
       </div>
 

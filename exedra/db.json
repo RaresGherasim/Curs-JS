@@ -3,7 +3,29 @@
     {
       "email": "rgherasim@schreder.com",
       "password": "$2a$10$HYoKOAwhbnDOX2ojkyPwT.ZpIooj45H.2ARuyj78EFx1AtMqEaqe6",
+      "admin": true,
       "id": 1
+    },
+    {
+      "email": "rares.gherasim@gmail.com",
+      "password": "$2a$10$8/y/pvYeN0FnGQP49AVtZ.v6.f5x/DvKRbDa4ZREALRdilfJt73R.",
+      "username": "rares.gherasim@gmail.com",
+      "admin": false,
+      "id": 2
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "$2a$10$k.t0LiAFUUr8RjkZCJ1FDeWrmmjXWO5aflBgB84kZfGmvM6BldUR6",
+      "username": "Test",
+      "admin": false,
+      "id": 3
+    },
+    {
+      "email": "ghe_rares@yahoo.com",
+      "password": "$2a$10$F4awo3lQdskT3cYQ.VIHhuQVzZLxm3pu8GB.hXoDw0sklF4NHUSlK",
+      "username": "ghe_rares@yahoo.com",
+      "admin": false,
+      "id": 4
     }
   ],
   "devicesSim": [
@@ -1185,10 +1207,9 @@
       "tenant": "ro-ab-abrud",
       "createdAt": "2023-12-04T10:41:21.457Z",
       "controllerCoords": {
-        "type": "Point",
         "coordinates": [
-          23.0647773,
-          46.2737312
+          "23.064015",
+          "46.275916"
         ]
       },
       "configuration": {

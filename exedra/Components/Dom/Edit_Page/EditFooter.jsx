@@ -18,7 +18,7 @@ function EditFooter() {
             <button onClick={() => handleButtonClick('delete')}>Delete device</button>
         </div>
             <button onClick={() => handleButtonClick('new')}>New device</button>
-            <button onClick={() => handleButtonClick('manage')}>Manage users</button>
+            <button onClick={() => handleButtonClick('manageUsers')}>Manage users</button>
 
           </div>
       </div>
