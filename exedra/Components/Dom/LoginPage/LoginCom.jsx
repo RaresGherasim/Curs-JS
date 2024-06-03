@@ -1,5 +1,51 @@
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../src/App";
+
 function LogInComp() {
+
+  const navigate = useNavigate();
+  const { setAuth } = useContext(AuthContext);
+  const [error, setError] = useState();
+
+  async function login(event) {
+    event.preventDefault();
+    setError(null);
+
+    const formElement = event.target;
+    const { email, password } = formElement;
+
+    const user = {
+      email: email.value,
+      password: password.value,
+    };
+
+    const response = await fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+    const body = await response.json();
+
+    if (response.status === 400) {
+      setError(body);
+      return;
+    }
+
+    if (response.ok) {
+      localStorage.setItem("accessToken", body.accessToken);
+      setAuth(body.accessToken);
+      navigate("/firstPage/");
+    }
+  }
+
   return (
+
+    <form onSubmit={login}>
+    {error ? <p className='error'>{error}</p> : ""}
+
     <section className="mainLogo">
       <br />
       <br />
@@ -32,9 +78,9 @@ function LogInComp() {
         <div className="signInTitle"></div>
         <div className="signInEmail">
           <input
-            id="email"
-            name="email"
-            type="email"
+            id="password"
+            name="password"
+            type="password"
             required=""
             className="signInEmailField"
             placeholder="Password"
@@ -61,6 +107,7 @@ function LogInComp() {
       <br />
       <div className="separator">s</div>
     </section>
+    </form>
   );
 }
 

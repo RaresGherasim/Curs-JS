@@ -10,8 +10,7 @@ function DeviceInfo() {
   const [device, setDevice] = useState([]);
   const [addres, setAddress] = useState([]);
 
-  let lat = device?.controllerCoords?.coordinates[1];
-  let lon = device?.controllerCoords?.coordinates[0];
+
   let key = "AIzaSyD6rYPz4-h51wtsvT91o0i1zUftpZvM-ys";
 
   function saveDevice(event){

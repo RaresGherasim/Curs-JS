@@ -13,17 +13,21 @@ import EditConfigurationPage from "../Components/Dom/Edit_Page/ConfigurationTab/
 import EditFailuresPage from "../Components/Dom/Edit_Page/FailuresTab/FailuresPage";
 import EditMeteringPage from "../Components/Dom/Edit_Page/MeteringTab/MeteringPage";
 import Header from "../Components/Dom/LoginPage/Header";
-import Footer from "../Components/Dom/InfoPage/Footer";
-
+// import Footer from "../Components/Dom/InfoPage/Footer";
+import NewDevicePage from "../Components/Dom/NewDevicePage/NewDevicePage";
+// import NewDeviceButtons from "../Components/Dom/NewDevicePage/NewDeviceButtons";
+// import NewDeviceInterface from "../Components/Dom/NewDevicePage/NewDeviceInterface";
+import DeleteDevicePage from "../Components/Dom/DeleteDevicePage/DeleteDevicePage";
+import FirstPage from "../Components/Dom/FirstPage/FirstPage";
 
 export const DeviceContext = React.createContext();
 export const AuthContext = React.createContext();
 
 function App() {
   const accessToken = localStorage.getItem("accessToken");
-  const [devices, setDevices] = useState([]);
+  // const [devices, setDevices] = useState([]);
   const [auth, setAuth] = useState(accessToken);
-  let [className, setClassName] = useState("green");
+
 
   // const [selectedDeviceId, setSelectedDeviceId] = useState(null);
 
@@ -31,40 +35,81 @@ function App() {
   //   setSelectedDeviceId(deviceId);
   // };
 
-  function setColor(color) {
-    setClassName(color);
-  }
-
   return (
     <>
-    <div className="mainPage">
-      <Header></Header>
-      <BrowserRouter>
-        <Routes>
-          <Route path="login" element={<LoginPage />}></Route>
-          <Route path="/view/info/:idFromPath" element={<InfoPage />}></Route>
-          <Route path="/view/metering/:idFromPath" element={<MeteringPage />}></Route>
-          <Route path="/view/failures/:idFromPath" element={<FailuresPage />}></Route>
-          <Route path="/view/status/:idFromPath" element={<StatusPage />}></Route>
-          <Route path="/view/configuration/:idFromPath" element={<ConfigurationPage />}></Route>
-        
-          <Route path="/edit/info/:idFromPath" element={<EditInfoPage />}></Route>
-          <Route path="/edit/metering/:idFromPath" element={<EditMeteringPage />}></Route>
-          <Route path="/edit/failures/:idFromPath" element={<EditFailuresPage />}></Route>
-          <Route path="/edit/status/:idFromPath" element={<StatusPage />}></Route>
-          <Route path="/edit/configuration/:idFromPath" element={<EditConfigurationPage />}></Route>
-         
-        </Routes>
+      <div className="mainPage">
+      <AuthContext.Provider value={{ auth, setAuth }}>
+        <BrowserRouter>
+        <Header/>
+          <Routes>
+            <Route path="/login" element={<LoginPage />}></Route>
+            <Route path="/view/info/:idFromPath" element={<InfoPage />}></Route>
+            <Route
+              path="/view/metering/:idFromPath"
+              element={<MeteringPage />}
+            ></Route>
+            <Route
+              path="/view/failures/:idFromPath"
+              element={<FailuresPage />}
+            ></Route>
+            <Route
+              path="/view/status/:idFromPath"
+              element={<StatusPage />}
+            ></Route>
+            <Route
+              path="/view/configuration/:idFromPath"
+              element={<ConfigurationPage />}
+            ></Route>
 
-      </BrowserRouter>
-    </div>
+            <Route
+              path="/edit/info/:idFromPath"
+              element={<EditInfoPage />}
+            ></Route>
+            <Route
+              path="/edit/metering/:idFromPath"
+              element={<EditMeteringPage />}
+            ></Route>
+            <Route
+              path="/edit/failures/:idFromPath"
+              element={<EditFailuresPage />}
+            ></Route>
+            <Route
+              path="/edit/status/:idFromPath"
+              element={<StatusPage />}
+            ></Route>
+            <Route
+              path="/edit/configuration/:idFromPath"
+              element={<EditConfigurationPage />}
+            ></Route>
+            <Route 
+              path="/new/*"
+              element={<NewDevicePage />}
+            ></Route>
+            <Route 
+              path="/delete/info/:idFromPath"
+              element={<DeleteDevicePage />}
+            ></Route>
+            <Route 
+              path="/logout"
+              element={<NewDevicePage />}
+            ></Route>
+            <Route 
+              path="/firstPage/"
+              element={<FirstPage />}
+            ></Route>
+            <Route 
+              path="/"
+              element={<LoginPage />}
+            ></Route>
+            <Route 
+              path="view/info/undefined"
+              element={<FirstPage />}
+            ></Route>
+          </Routes>
+        </BrowserRouter>
+        </AuthContext.Provider>
+      </div>
 
-      <h1>
-        <p className={className}>Hello</p>
-      </h1>
-
-      <button onClick={() => setColor("red")}>Red</button>
-      <button onClick={() => setColor("blue")}>Blue</button>
       {/* 
       <DeviceContext.Provider value={{ devices, setDevices }}>
       <AuthContext.Provider value={{ auth, setAuth }}>

@@ -1,17 +1,21 @@
-import { useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 // import PropTypes from "prop-types";
 import getAddress from "../../../Fetch/FetchAddress.jsx";
 import { useEffect, useState } from "react";
 import getSimDevice from "../../../GetFromDb/GetSimDevice.jsx";
+import FirstPage from "../../FirstPage/FirstPage.jsx";
 
 function DeviceInfo() {
   const { idFromPath } = useParams();
+  const navigate = useNavigate();
   //   const selectedDevice = devicesList.find((device) => device.id == idFromPath);
 
+  
+  
   const [device, setDevice] = useState([null]);
   const [addres, setAddress] = useState([]);
   let key = "AIzaSyD6rYPz4-h51wtsvT91o0i1zUftpZvM-ys";
-
+  
   useEffect(() => {
     getSimDevice(idFromPath).then((dev) => setDevice(dev));
   }, [idFromPath]);
@@ -21,6 +25,7 @@ function DeviceInfo() {
       getAddress(lat, lon, key).then((adr) => setAddress(adr));
     }
   }, [device]);
+
 
   return (
     <div className="deviceInfoZone">
@@ -65,6 +70,4 @@ function DeviceInfo() {
 
 export default DeviceInfo;
 
-// DeviceInfo.propTypes = {
-//   deviceId: PropTypes.string,
-// };
+

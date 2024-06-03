@@ -4,7 +4,6 @@ import OptionButtons from "../OptionButtons";
 import DeviceInfo from "./DeviceInfo";
 import Footer from "../Footer";
 
-
 function InfoPage() {
   const [selectedDeviceId, setSelectedDeviceId] = useState(null);
 
@@ -12,6 +11,7 @@ function InfoPage() {
   const handleDeviceClick = (deviceId) => {
     setSelectedDeviceId(deviceId);
   };
+
 
   return (
     <div>

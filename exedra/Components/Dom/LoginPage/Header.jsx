@@ -1,5 +1,7 @@
-function Header() {
+import { useNavigate } from "react-router-dom";
 
+function Header() {
+  const navigate = useNavigate();
     return(
   <header>
     <div className="header">
@@ -12,6 +14,7 @@ function Header() {
             />
         </a>
         <div className="spaceLogo"></div>
+        <button id="logoutButton" onClick={() => navigate("/login")}>Logout</button>
       </div>
     </div>
     <div className="separator">s</div>

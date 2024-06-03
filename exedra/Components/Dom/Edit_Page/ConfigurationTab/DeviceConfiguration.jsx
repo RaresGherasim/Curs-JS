@@ -21,9 +21,7 @@ function EditDeviceConfiguration() {
         return <p>Error fetching device information.</p>;
       }
     
-      const dimming = device.configuration?.dimmingType || ""; 
-      const luminaire = device.configuration?.luminaireSpecification || "";
-    
+
 return(
     <div className='deviceInfoZone'>
       <div className="device__id">
@@ -34,14 +32,43 @@ return(
       <label htmlFor="deviceName">Device Name:</label>
         <span name="deviceName"> {device.name} </span>
       </div>
-      <div className="device__Luminaire">
-        <label htmlFor="deviceLuminaire">Device Luminaire:</label>
-        <span name="deviceLuminaire"> {luminaire} </span>
-      </div>
-      <div className="device__dimming">
-        <label htmlFor="deviceDimming">Device dimming:</label>
-        <span name="deviceDimming"> {dimming} </span>
-      </div>
+      <br />
+      <div>
+          <label htmlFor="lamp">Luminaire: </label>
+          <input
+            name="lamp"
+            id="lamp"
+            type="text"
+            defaultValue={device?.configuration?.luminaireSpecification}
+          />
+        </div>
+        <div>
+          <label htmlFor="socket">Device socket type: </label>
+          <input
+            name="socket"
+            id="socket"
+            type="text"
+            defaultValue={device?.configuration?.luminaireSocket}
+          />
+        </div>
+        <div>
+          <label htmlFor="dimming">Device dimming interface: </label>
+          <input
+            name="dimming"
+            id="dimming"
+            type="text"
+            defaultValue={device?.configuration?.dimmingType}
+          />
+        </div>
+        <div>
+          <label htmlFor="daliCount">Device number of drivers: </label>
+          <input
+            name="daliCount"
+            id="daliCount"
+            type="number"
+            defaultValue={device?.configuration?.daliCount}
+          />
+        </div>
      
     </div>
 )

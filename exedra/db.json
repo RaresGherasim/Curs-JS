@@ -1,5 +1,11 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "rgherasim@schreder.com",
+      "password": "$2a$10$HYoKOAwhbnDOX2ojkyPwT.ZpIooj45H.2ARuyj78EFx1AtMqEaqe6",
+      "id": 1
+    }
+  ],
   "devicesSim": [
     {
       "id": "b3e62e3e-a501-4cc3-886e-1e2c825be89e",
@@ -103,10 +109,68 @@
       "name": "14EFCF011101AB5B",
       "metering": {
         "activeEnergy": {
-          "value": "89.3754296"
+          "value": 89.3754296,
+          "date": "2024-04-10T14:34:36.000Z"
         },
         "activePower": {
-          "value": "23"
+          "value": 0,
+          "date": "2024-04-10T14:34:36.000Z"
+        },
+        "actualLightState": {
+          "value": 0,
+          "date": "2024-04-10T14:34:36.000Z"
+        },
+        "operatingHours": {
+          "value": 1530,
+          "date": "2024-04-10T10:07:45.000Z"
+        },
+        "powerFactor": {
+          "value": 0,
+          "date": "2024-04-10T14:34:36.000Z"
+        },
+        "supplyCurrent": {
+          "value": 0,
+          "date": "2024-04-10T14:34:36.000Z"
+        },
+        "supplyVoltage": {
+          "value": 0,
+          "date": "2024-04-10T14:34:36.000Z"
+        },
+        "lampCommandMode": {
+          "value": 0,
+          "date": "2023-11-23T06:59:56.406Z"
+        },
+        "controllerTemperature": {
+          "value": 65.9343109,
+          "date": "2024-04-10T14:07:47.000Z"
+        },
+        "controllerMemoryFree": {
+          "value": 72,
+          "date": "2023-12-12T08:42:21.000Z"
+        },
+        "lastSuccessfulCommunication": {
+          "value": "2024-04-10T14:34:36.000Z",
+          "date": "2024-04-10T14:34:36.000Z"
+        },
+        "lampSupplyLossCount": {
+          "value": 96,
+          "date": "2024-04-10T14:34:36.000Z"
+        },
+        "controllerOperatingHours": {
+          "value": 2871,
+          "date": "2024-04-10T10:07:45.000Z"
+        },
+        "communicationSetupTime": {
+          "value": 144.0464324,
+          "date": "2024-02-23T09:16:28.000Z"
+        },
+        "firmwareUpdateStatus": {
+          "value": "Updated",
+          "date": "2024-02-16T14:44:27.708Z"
+        },
+        "driverOperatingHours": {
+          "value": 0,
+          "date": "2024-04-10T10:07:45.000Z"
         }
       },
       "lastAccessTime": "2024-04-13T14:20:07.054Z",
@@ -125,9 +189,10 @@
       "tenant": "ro-ab-abrud",
       "createdAt": "2023-11-23T06:59:56.336Z",
       "controllerCoords": {
+        "type": "Point",
         "coordinates": [
-          "23.064085",
-          "46.2756423"
+          23.064085,
+          46.2756423
         ]
       },
       "configuration": {
@@ -291,10 +356,68 @@
       },
       "metering": {
         "activeEnergy": {
-          "value": "111.892194"
+          "value": 111.892194,
+          "date": "2024-05-25T00:24:41.000Z"
         },
         "activePower": {
-          "value": "44"
+          "value": 44.6649999,
+          "date": "2024-05-25T00:01:03.000Z"
+        },
+        "actualLightState": {
+          "value": 75,
+          "date": "2024-05-25T00:00:01.000Z"
+        },
+        "operatingHours": {
+          "value": 1976,
+          "date": "2024-05-24T09:24:21.000Z"
+        },
+        "powerFactor": {
+          "value": 0.907,
+          "date": "2024-05-25T00:20:34.000Z"
+        },
+        "supplyCurrent": {
+          "value": 0.206,
+          "date": "2024-05-25T00:01:03.000Z"
+        },
+        "supplyVoltage": {
+          "value": 241.1839999,
+          "date": "2024-05-25T00:58:11.000Z"
+        },
+        "lampCommandMode": {
+          "value": 0,
+          "date": "2023-11-23T06:59:55.578Z"
+        },
+        "controllerTemperature": {
+          "value": 24.6735839,
+          "date": "2024-05-25T00:19:41.000Z"
+        },
+        "controllerMemoryFree": {
+          "value": 52,
+          "date": "2024-05-24T21:29:28.000Z"
+        },
+        "lastSuccessfulCommunication": {
+          "value": "2024-05-25T00:58:11.000Z",
+          "date": "2024-05-25T00:58:11.000Z"
+        },
+        "lampSupplyLossCount": {
+          "value": 102,
+          "date": "2024-05-23T09:23:05.000Z"
+        },
+        "controllerOperatingHours": {
+          "value": 4006,
+          "date": "2024-05-24T09:24:21.000Z"
+        },
+        "communicationSetupTime": {
+          "value": 144.0952606,
+          "date": "2024-04-19T13:54:27.000Z"
+        },
+        "firmwareUpdateStatus": {
+          "value": "Updated",
+          "date": "2024-05-23T09:28:38.423Z"
+        },
+        "driverOperatingHours": {
+          "value": 2055.67,
+          "date": "2024-05-24T09:24:21.000Z"
         }
       },
       "lastAccessTime": "2024-05-25T00:58:13.049Z",
@@ -313,10 +436,9 @@
       "tenant": "ro-ab-abrud",
       "createdAt": "2023-11-23T06:59:55.506Z",
       "controllerCoords": {
-        "type": "Point",
         "coordinates": [
-          23.063829,
-          46.27549
+          "23.063829",
+          "46.27549"
         ]
       },
       "configuration": {
@@ -815,9 +937,10 @@
       "tenant": "ro-ab-abrud",
       "createdAt": "2023-11-23T06:59:51.550Z",
       "controllerCoords": {
+        "type": "Point",
         "coordinates": [
-          "23.0639839",
-          "46.2756042"
+          23.0639839,
+          46.2756042
         ]
       },
       "configuration": {
@@ -2795,9 +2918,10 @@
       "tenant": "ro-ab-abrud",
       "createdAt": "2023-12-04T10:48:19.653Z",
       "controllerCoords": {
+        "type": "Point",
         "coordinates": [
-          "23.0645008",
-          "46.2738914"
+          23.0645008,
+          46.2738914
         ]
       },
       "configuration": {

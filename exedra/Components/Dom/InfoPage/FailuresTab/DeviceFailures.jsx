@@ -34,6 +34,7 @@ return(
       <label htmlFor="deviceName">Device Name:</label>
         <span name="deviceName"> {device.name} </span>
       </div>
+      <br />
       <div className="device__Failures">
         <label htmlFor="deviceFailures">Device Failures: </label>
         <span name="deviceFailures"> {failures} </span>
